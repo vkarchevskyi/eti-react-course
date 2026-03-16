@@ -9,7 +9,13 @@ export default function App() {
       <main>
         <p>Список студентів:</p>
         {mockData.map((student) => (
-          <div key={student.student}>
+          <div
+            key={student.student}
+            style={{
+              color: student.active ? 'inherit' : 'gray',
+              textDecoration: student.active ? 'none' : 'line-through',
+            }}
+          >
             {student.student} - {student.mark}
           </div>
         ))}
@@ -31,6 +37,15 @@ export default function App() {
               .reduce((acc, student) => acc + student.mark, 0)}
           </span>
         </p>
+
+        <p>Список студентів (відсортований за спаданням балів):</p>
+        {[...mockData]
+          .sort((a, b) => b.mark - a.mark)
+          .map((student) => (
+            <div key={student.student}>
+              {student.student} - {student.mark}
+            </div>
+          ))}
       </main>
     </>
   );
