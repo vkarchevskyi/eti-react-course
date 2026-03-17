@@ -1,0 +1,33 @@
+.appContainer {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 2rem 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1c1e21;
+}
+
+.appContainer h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.feed {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Додамо трохи плавності при появі */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.feed > * {
+  animation: fadeIn 0.5s ease forwards;
+}
