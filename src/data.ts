@@ -12,7 +12,7 @@ export const postsData = [
     author: 'Admin',
     avatar: 'https://placehold.co/50',
     content:
-      'Сьогодні ми вивчаємо Lists &amp; Keys. Не забувайте про унікальні ключі!',
+      'Сьогодні ми вивчаємо Lists & Keys. Не забувайте про унікальні ключі!',
     date: '4 год тому',
     likes: 12,
   },
